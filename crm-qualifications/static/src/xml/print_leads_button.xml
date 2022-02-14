@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xml:space="preserve">
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_add" t-operation="before">
+            <button t-if="widget.modelName == 'crm.lead'" id="cs_print_late_leads" class="btn btn-primary cs_print_late_leads" type="button">Print late</button>
+        </t>
+    </t>
+</template>

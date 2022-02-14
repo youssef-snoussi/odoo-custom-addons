@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_late_leads">
+        <t t-call="web.external_layout">
+            <t t-set="doc" t-value="doc.with_context(lang=doc.user_id.lang)" />
+                <div class="page">
+                    <div class="oe_structure" />
+                        <h2 class="mt16">
+                            <span>Late Leads' Actions</span>
+                            <span t-field="doc.name"/>
+                        </h2>
+
+                    <table class="table table-sm o_main_table">
+                        <thead>
+                            <th name="dt_name" class="text-center">Name</th>
+                          <!--  <th name="dt_client" class="text-center">Client</th>
+                            <th name="dt_phone" class="text-center">Phone</th>-->
+                            <th name="dt_date" class="text-center">Action Date</th>
+                          <!--  <th name="dt_team" class="text-center">Sales Team</th>
+                            <th name="dt_salesperson" class="text-center">Salesperson</th>-->
+                        </thead>
+                        <tbody class="late_leads_tbody">
+                            <t t-foreach="doc.ids" t-as="line">
+                                <tr t-att-class="o_line_section">
+                                    <td name="dt_name" class="text-center"><span t-field="line.name"/></td>
+                                    <!--<td name="dt_client" class="text-center"><span t-field="line.partner_id.name"/></td>
+                                    <td name="dt_phone" class="text-center"></td>-->
+                                    <td name="dt_date" class="text-center"><span t-field="line.action_date"/></td>
+                                    <!--<td name="dt_team" class="text-center">Sales Team</td>
+                                    <td name="dt_salesperson" class="text-center">Salesperson</td>-->
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    </div>
+                </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="inherited_partner_form_view" model="ir.ui.view">
+        <field name="name">Partner View</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet" position="before">
+                <header>
+                    <button name="create_new_lead" string="Create New Lead" class="btn btn-primary" type="object" />
+                </header>
+            </xpath>
+            <xpath expr="/form/sheet/notebook" position="inside">
+                <page name="crm-qualifications" string="CRM Qualifications">
+                    <field name="lead_ids">
+                        <tree>
+                            <button icon="fa-calendar" name="edit_action_date" type="object"/>
+                            <field name="action_date" read_only="true"/>
+                            <field name="name" string="Lead" read_only="true"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

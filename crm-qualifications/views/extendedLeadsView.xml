@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="extended_leads_view" model="ir.ui.view">
+        <field name="name">Lead View</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_name']" position="before">
+                <field name="partner_id" position="attributes">
+                    <attribute name="groups">base.view_groups_form</attribute>
+                </field>
+            </xpath>
+            <!-- adding a tab for next actions -->
+            <xpath expr="/form/sheet/notebook" position="inside">
+                <page name="reminder" string="Reminder">
+                    <group name="lead_action_reminder">
+                        <field name="action_date"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Wizard for creating a lead fot a client -->
+    <record id="wizard_create_lead" model="ir.ui.view">
+        <field name="name">wizard_create_lead.view.form</field>
+        <field name="model">crm.lead</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name" string="Lead name"/>
+                        <field name="type" readonly="1"/>
+                        <field name="partner_id" readonly="1"/>
+                        <!-- <field name="expiration_date" string="Expiration date"/> -->
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="define_action_date" string="Next" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- a wizard for editing next action date -->
+    <record id="wizard_edit_action_date" model="ir.ui.view">
+        <field name="name">wizard_edit_date.view.form</field>
+        <field name="model">crm.lead</field>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <form string="Next Action Date">
+                <sheet>
+                    <group>
+                        <field name="action_date" string="Next action date"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button special="save" string="save"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
