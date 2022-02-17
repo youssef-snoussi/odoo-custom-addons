@@ -1,3 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import extendedLeads, extendedPartner
+from . import custom_lead
+from . import custom_partner

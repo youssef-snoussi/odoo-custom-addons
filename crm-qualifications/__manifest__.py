@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "CRM-Qualifications",
+    'name': "CRM Qualifications",
 
     'summary': """
-        This is an extension of the CRM module 12.0, it adds some useful functionalities""",
+        This addon adds features to the CRM app""",
 
     'description': """
-        
+        Long description of module's purpose
     """,
 
     'author': "Youssef",
@@ -24,13 +24,10 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/extendedLeadsView.xml',
-        'views/extendedPartnerView.xml',
-        'reports/report_action.xml',
-        'views/assets_backend.xml',
-    ],
-    'qweb': [
-        'static/src/xml/print_leads_button.xml',
+        'views/custom_lead_views.xml',
+        'views/custom_partner_views.xml',
+        'report/report.xml',
+        'report/report_overdue_actions_template.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

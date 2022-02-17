@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_crm-qualifications_crm-qualifications,crm-qualifications.crm-qualifications,model_crm-qualifications_crm-qualifications,,1,0,0,0
+access_custom-addons/crm-qualifications_custom-addons/crm-qualifications,custom-addons/crm-qualifications.custom-addons/crm-qualifications,model_custom-addons/crm-qualifications_custom-addons/crm-qualifications,,1,0,0,0

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report id="report_overdue_actions" 
+                model="crm.lead" 
+                string="Overdue Actions" 
+                report_type="qweb-pdf" 
+                name="crm-qualifications.report_overdue_actions_template" 
+                file="crm-qualifications.report_overdue_actions_template" 
+                print_report_name="'Leads_Overdue_Actions - %s' % datetime.date.today()" />
+
+    </data>
+
+</odoo>
