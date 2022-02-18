@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 
 
 class CustomPartner(models.Model):
@@ -11,7 +11,7 @@ class CustomPartner(models.Model):
     @api.multi
     def create_new_lead(self):
         return {
-            'name': 'Create New Lead',
+            'name': _('Create New Lead'),
             'view_type': 'form',
             'view_mode': 'form',
             'target': 'new',

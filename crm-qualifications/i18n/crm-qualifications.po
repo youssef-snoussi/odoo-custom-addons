@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm-qualifications
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-18 01:19+0000\n"
+"PO-Revision-Date: 2022-02-18 01:19+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.report_overdue_actions_template
+msgid "Action Date"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.custom_partner_inherit_crm_qualifications
+msgid "CRM Qualifications"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.report_overdue_actions_template
+msgid "Client Name"
+msgstr ""
+
+#. module: crm-qualifications
+#: model:ir.model,name:crm-qualifications.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.report_overdue_actions_template
+msgid "Contact Name"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.report_overdue_actions_template
+msgid "Contact Phone"
+msgstr ""
+
+#. module: crm-qualifications
+#: code:addons/crm-qualifications/models/custom_partner.py:14
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.custom_partner_inherit_crm_qualifications
+#, python-format
+msgid "Create New Lead"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.portal_my_overdue_leads
+msgid "Date"
+msgstr ""
+
+#. module: crm-qualifications
+#: code:addons/crm-qualifications/controllers/lead_portal.py:33
+#, python-format
+msgid "Due Date"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.portal_my_overdue_leads
+msgid "Lead"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.report_overdue_actions_template
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.wizard_create_lead
+msgid "Lead Name"
+msgstr ""
+
+#. module: crm-qualifications
+#: model:ir.model,name:crm-qualifications.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm-qualifications
+#: model:ir.model.fields,field_description:crm-qualifications.field_res_partner__lead_ids
+#: model:ir.model.fields,field_description:crm-qualifications.field_res_users__lead_ids
+msgid "Leads"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.report_overdue_actions_template
+msgid "Leads: Overdue Actions -"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.portal_my_home_menu_overdue_lead
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.portal_my_home_overdue_lead
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.portal_my_overdue_leads
+msgid "Leads: Overdue Tasks"
+msgstr ""
+
+#. module: crm-qualifications
+#: code:addons/crm-qualifications/controllers/lead_portal.py:34
+#, python-format
+msgid "Name"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.wizard_create_lead
+msgid "Next"
+msgstr ""
+
+#. module: crm-qualifications
+#: code:addons/crm-qualifications/models/custom_lead.py:13
+#: model:ir.model.fields,field_description:crm-qualifications.field_crm_lead__next_action_date
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.wizard_define_action_date
+#, python-format
+msgid "Next Action Date"
+msgstr ""
+
+#. module: crm-qualifications
+#: model:ir.actions.report,name:crm-qualifications.report_overdue_actions
+msgid "Overdue Actions"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.custom_lead_inherit_crm_qualifications
+msgid "Reminder"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.report_overdue_actions_template
+msgid "Sales Team"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.report_overdue_actions_template
+msgid "Salesperson"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.wizard_define_action_date
+msgid "Save"
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.portal_my_overdue_leads
+msgid "You don't have any overdue tasks."
+msgstr ""
+
+#. module: crm-qualifications
+#: model_terms:ir.ui.view,arch_db:crm-qualifications.custom_partner_inherit_crm_qualifications
+msgid "name"
+msgstr ""
+

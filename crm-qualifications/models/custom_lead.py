@@ -1,5 +1,4 @@
-from odoo import models, fields, api
-
+from odoo import models, fields, api, _
 
 class CustomLead(models.Model):
     _inherit = 'crm.lead'
@@ -11,7 +10,7 @@ class CustomLead(models.Model):
     @api.multi
     def define_next_action_date(self):
         return {
-            'name': 'Next Action Date',
+            'name': _('Next Action Date'),
             'view_type': 'form',
             'view_mode': 'form',
             'target': 'new',

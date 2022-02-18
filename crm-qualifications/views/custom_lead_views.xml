@@ -55,11 +55,10 @@
                     </group>
                 </sheet>
                 <footer>
-                    <button special="save" string="Save" />
+                    <button special="save" class="btn btn-primary" string="Save" />
                 </footer>
             </form>
         </field>
     </record>
 
 </odoo>
-
