@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['crm'],
+    'depends': ['crm','website','portal'],
 
     # always loaded
     'data': [
@@ -28,6 +28,7 @@
         'views/custom_partner_views.xml',
         'report/report.xml',
         'report/report_overdue_actions_template.xml',
+        'views/portal_lead_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

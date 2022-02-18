@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portal_my_home_overdue_lead" name="Portal My Home : Overdue Lead Entries" inherit_id="portal.portal_my_home" priority="30">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Leads: Overdue Tasks</t>
+                <t t-set="url" t-value="'/my/overdue_leads'"/>
+                <t t-set="count" t-value="lead_count"/>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home_menu_overdue_lead" name="Portal layout : Overdue tasks menu entry" inherit_id="portal.portal_breadcrumbs" priority="15">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'overdue_leads' or overdue_leads" t-attf-class="breadcrumb-item #{'active ' if not lead else ''}">
+                <a t-if="lead" t-attf-href="/my/overdue_leads?{{ keep_query() }}">
+                    Leads: Overdue Tasks
+                </a>
+                <t t-else="">
+                    Leads: Overdue Tasks
+                </t>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="portal_my_overdue_leads" name="template_name">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title" >Leads: Overdue Tasks</t>
+            </t>
+            <div t-if="not leads" class="alert alert-warning mt8" role="alert">
+                You don't have any overdue tasks.
+            </div>
+            <t t-if="leads" t-call="portal.portal_table">
+                <thead>
+                    <tr>
+                        <th>Lead</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="leads" t-as="lead">
+                        <td>
+                            <a t-attf-href="/my/overdue_leads#{lead.id}" >
+                                <span t-field="lead.name" />
+                            </a>
+                        </td>
+                        <td>
+                            <span t-field="lead.next_action_date" />
+                        </td>
+                    </tr>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+</odoo>
